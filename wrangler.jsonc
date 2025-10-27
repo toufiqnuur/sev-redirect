@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sev-redirect",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-26",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_compat_populate_process_env",
+  ],
+  "vars": {
+    "FRONTEND_URL": "",
+
+    "DATABASE_URL": "",
+
+    "REDIS_URL": "",
+    "REDIS_TOKEN": "",
+  },
+  "assets": { "directory": "static" },
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "",
+      "custom_domain": true,
+    },
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+  },
+}
